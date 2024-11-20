@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaReact, FaNodeJs, FaDatabase, FaHtml5, FaCss3Alt, FaJsSquare } from "react-icons/fa";
 import { CgCPlusPlus } from "react-icons/cg";
+import { IoLogoFirebase } from "react-icons/io5";
 
 const skills = [
   {
@@ -16,8 +17,8 @@ const skills = [
   // },
 
   {
-    name: "Database",
-    icon: <FaDatabase size={40} className="text-indigo-500" />,
+    name: "Firebase",
+    icon: <IoLogoFirebase  size={40} className="text-indigo-500" />,
     description: "Efficient data storage with Firebase.",
   },
   {

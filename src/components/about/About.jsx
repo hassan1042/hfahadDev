@@ -6,7 +6,10 @@ const AboutMe = () => {
     { title: "Coding", emoji: "💻", color: "bg-blue-200 text-blue-600" },
     { title: "Cricket", emoji: "🏏", color: "bg-green-200 text-green-600" },
     { title: "Astronomy", emoji: "✨", color: "bg-purple-200 text-purple-600" },
-    { title: "Web Series", emoji: "🎥", color: "bg-red-200 text-red-600" },
+    { title: "Video Making", emoji: "🎥", color: "bg-yellow-200 text-yellow-600" },
+    { title: "Book Reading", emoji: "📖", color: "bg-teal-200 text-teal-600" },
+    { title: "Exploring", emoji: "🏞️", color: "bg-teal-200 text-teal-600" },
+    { title: "Hiking", emoji: "🏔️", color: "bg-teal-200 text-teal-600" },
   ];
 
   const sectionAnimation = {
@@ -18,12 +21,12 @@ const AboutMe = () => {
   return (
     <motion.section
       {...sectionAnimation}
-      className="flex flex-col justify-center items-center px-6 py-12 bg-gray-50  rounded-lg shadow-lg h-full"
+      className="flex flex-col justify-center items-center max-sm:px-2 px-6 max-sm:py-2 md:py-12 bg-gray-50  rounded-lg shadow-lg h-full"
     >
       {/* Heading */}
       <motion.h2
         {...sectionAnimation}
-        className="text-3xl font-bold text-gray-800  mb-6"
+        className="max-sm:text-xl text-3xl font-bold text-gray-800 max-sm:mb-4  mb-6"
       >
         About Me
       </motion.h2>
@@ -31,9 +34,9 @@ const AboutMe = () => {
       {/* About Me Details */}
       <motion.div
         {...sectionAnimation}
-        className="text-center text-gray-600 mb-8"
+        className="text-justify text-gray-600 mb-8"
       >
-        <p className="mb-4">
+        <p className="max-sm:mb-2 mb-4">
           Hi! I'm a passionate Computer Science student from Swat, Pakistan,
           working to become a MERN stack developer. I love exploring cutting-edge
           technologies, building dynamic web applications, and solving real-world
@@ -43,7 +46,7 @@ const AboutMe = () => {
       </motion.div>
       <motion.h4
         {...sectionAnimation}
-        className="text-2xl font-semibold text-gray-700  mb-6"
+        className="max-sm:text-lg text-2xl font-semibold text-gray-700 max-sm:mb-4 mb-6"
       >
       Hobbies
       </motion.h4>
@@ -68,7 +71,7 @@ const AboutMe = () => {
             }}
             className={`flex items-center justify-center px-4 py-2 ${hobby.color} rounded-full shadow-md hover:shadow-lg transform hover:scale-105 transition`}
           >
-            <span className="text-xl mr-2">{hobby.emoji}</span>
+            <span className="max-sm:text-sm text-xl mr-2">{hobby.emoji}</span>
             <span className="font-medium">{hobby.title}</span>
           </motion.div>
         ))}

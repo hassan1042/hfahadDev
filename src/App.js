@@ -51,7 +51,9 @@ function App() {
       </div>
 
       {/* Right Section */}
-      <div className="max-sm:w-[17%] w-[10%] bg-gray-100 border-l">
+      <div
+      onClick={() => setShowProfile(false)}
+       className="max-sm:w-[17%] w-[10%] bg-gray-100 border-l sticky top-0 h-screen">
       <RightNav activeSection={activeSection} setActiveSection={setActiveSection} />
       </div>
     </div>
