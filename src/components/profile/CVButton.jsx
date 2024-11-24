@@ -1,13 +1,15 @@
 import React from "react";
 import { FaDownload, FaEye } from "react-icons/fa";
+import LightAcrossButton from "../common/buttons/lightAcross/LightAcrossButton";
 
 const CVButton = () => {
   return (
     <div className="relative group py-2">
       {/* Main Button */}
-      <button className="px-4 py-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition">
+      {/* <button className="px-4 py-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition">
     My Resume 
-      </button>
+      </button> */}
+      <LightAcrossButton text={"My Resume"} />
 
       {/* Dropdown Menu */}
       <div className="absolute left-0 mt-2 bg-white shadow-lg rounded-md hidden group-hover:block">

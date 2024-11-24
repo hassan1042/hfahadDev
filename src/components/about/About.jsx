@@ -4,10 +4,11 @@ import { motion } from "framer-motion";
 const AboutMe = () => {
   const hobbies = [
     { title: "Coding", emoji: "💻", color: "bg-blue-200 text-blue-600" },
-    { title: "Cricket", emoji: "🏏", color: "bg-green-200 text-green-600" },
+    { title: "Gaming", emoji: "🎮", color: "bg-gray-200 text-gray-600" },
     { title: "Astronomy", emoji: "✨", color: "bg-purple-200 text-purple-600" },
     { title: "Video Making", emoji: "🎥", color: "bg-yellow-200 text-yellow-600" },
-    { title: "Book Reading", emoji: "📖", color: "bg-teal-200 text-teal-600" },
+    { title: "Book Reading", emoji: "📖", color: "bg-slate-200 text-slate-600" },
+    { title: "Cricket", emoji: "🏏", color: "bg-green-200 text-green-600" },
     { title: "Exploring", emoji: "🏞️", color: "bg-teal-200 text-teal-600" },
     { title: "Hiking", emoji: "🏔️", color: "bg-teal-200 text-teal-600" },
   ];
@@ -46,9 +47,9 @@ const AboutMe = () => {
       </motion.div>
       <motion.h4
         {...sectionAnimation}
-        className="max-sm:text-lg text-2xl font-semibold text-gray-700 max-sm:mb-4 mb-6"
+        className="max-sm:text-lg text-2xl font-semibold text-gray-700 max-sm:mb-4 mb-6 italic"
       >
-      Hobbies
+      What i love to do
       </motion.h4>
 
       {/* Hobbies Section */}
@@ -69,10 +70,10 @@ const AboutMe = () => {
                 transition: { delay: index * 0.2 },
               },
             }}
-            className={`flex items-center justify-center px-4 py-2 ${hobby.color} rounded-full shadow-md hover:shadow-lg transform hover:scale-105 transition`}
+            className={`flex items-center justify-center max-sm:px-2 max-sm:py-1 px-4 py-2 ${hobby.color} rounded-full shadow-md hover:shadow-lg transform hover:scale-105 transition`}
           >
-            <span className="max-sm:text-sm text-xl mr-2">{hobby.emoji}</span>
-            <span className="font-medium">{hobby.title}</span>
+            <span className="max-md:text-sm text-xl mr-2">{hobby.emoji}</span>
+            <span className="max-sm:text-[15px] font-medium">{hobby.title}</span>
           </motion.div>
         ))}
       </motion.div>

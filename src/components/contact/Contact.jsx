@@ -114,9 +114,9 @@ const InteractiveForm = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center max-sm:py-2 p-6 bg-gray-100 min-h-screen">
+    <div className="flex flex-col md:flex-row items-center justify-center max-sm:py-2 max-sm:p-2 p-6 bg-gray-100 min-h-screen">
       {/* Avatar Section */}
-      <div className="w-full md:w-1/2 flex justify-center">
+      <div className="w-full md:w-1/2 flex justify-center max-sm:sticky max-sm:top-0">
         <motion.div
           initial={{ scale: 1 }}
           animate={{ scale: 1.1 }}
@@ -127,7 +127,7 @@ const InteractiveForm = () => {
           <img
             src={`/avatars/${avatarState}.jpeg`} // Dynamic avatar images (neutral, happy, thinking)
             alt="Avatar"
-            className="max-md:w-32 max-md:h-32 w-40 h-40 rounded-full"
+            className="max-sm:w-24 max-sm:h-24 max-md:w-32 max-md:h-32 w-40 h-40 rounded-full"
           />
           {/* Speech Bubble */}
           {avatarState === "happy" && (
@@ -149,8 +149,8 @@ const InteractiveForm = () => {
       </div>
 
       {/* Form Section */}
-      <div className="w-full md:w-1/2 bg-white rounded-lg shadow-md p-6">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+      <div className="w-full md:w-1/2 bg-white rounded-lg shadow-md max-[350px]:p-2 p-6">
+        <h2 className="text-xl md:text-2xl max-sm:font-medium font-semibold text-gray-800 mb-4">
           Contact Me
         </h2>
         <form className="space-y-4">

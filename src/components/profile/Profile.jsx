@@ -4,6 +4,7 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from "react-icons/
 import CVButton from "./CVButton";
 import Profile from '../../assets/common/profile.jpg';
 import SocialLinks from "./Socials";
+import LightAcross from "../../styles/text/LightAcross";
 
 const LeftProfile = () => {
   return (
@@ -29,7 +30,11 @@ const LeftProfile = () => {
         transition={{ duration: 0.6 }}
         className="text-center"
       >
-        <h1 className="text-xl font-bold text-gray-800">Hassan Fahad Khan</h1>
+        {/* <h1 className="text-xl font-bold text-gray-800">Hassan Fahad Khan</h1> */}
+        <div>
+        <LightAcross text={'Hassan Fahad Khan'} />
+
+        </div>
         <p className="text-gray-600">Aspiring Full Stack Developer</p>
       </motion.div>
 
