@@ -10,7 +10,6 @@ const navItems = [
 ];
 
 const RightNav = ({activeSection, setActiveSection }) => {
-  console.log(activeSection)
   return (
     <motion.div
       className="flex flex-col items-center justify-center h-full space-y-6"
@@ -24,10 +23,7 @@ const RightNav = ({activeSection, setActiveSection }) => {
           onClick={() => setActiveSection(item.id)}
           className={`flex flex-col items-center text-gray-700 hover:text-primary focus:outline-none ${activeSection === item.text.toLowerCase() ? 'text-primary' : ''} `}
         >
-        {
-  console.log('the item is:' ,item.text)
-
-        }
+    
           {item.icon}
           <span className="mt-2 text-sm">{item.text}</span>
         </button>

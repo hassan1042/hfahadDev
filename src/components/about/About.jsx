@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const AboutMe = () => {
+
   const hobbies = [
     { title: "Coding", emoji: "💻", color: "bg-blue-200 text-blue-600" },
     { title: "Gaming", emoji: "🎮", color: "bg-gray-200 text-gray-600" },
@@ -18,11 +19,12 @@ const AboutMe = () => {
     whileInView: { opacity: 1, y: 0 },
     transition: { duration: 0.6 },
   };
+  
 
   return (
     <motion.section
       {...sectionAnimation}
-      className="flex flex-col justify-center items-center max-sm:px-2 px-6 max-sm:py-2 md:py-12 bg-gray-50  rounded-lg shadow-lg h-full"
+      className="flex flex-col justify-center items-center max-sm:px-2 px-6 max-sm:py-2 md:py-12 bg-gray-50  rounded-lg shadow-lg h-full "
     >
       {/* Heading */}
       <motion.h2

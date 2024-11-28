@@ -34,7 +34,7 @@ const Projects = () => {
         {/* Slide */}
         <motion.div
           key={currentIndex}
-          className="flex w-full max-lg:flex-col "
+          className="flex w-full max-lg:flex-col"
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -100 }}

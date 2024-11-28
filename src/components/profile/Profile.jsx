@@ -8,7 +8,7 @@ import LightAcross from "../../styles/text/LightAcross";
 
 const LeftProfile = () => {
   return (
-    <div className="flex flex-col items-center bg-gradient-to-br from-gray-200 to-gray-100 p-6 rounded-xl shadow-md min-h-screen">
+    <div className="flex flex-col items-center bg-gradient-to-br from-gray-200 to-gray-100 p-6 rounded-xl shadow-md min-h-screen sticky top-0">
       {/* Profile Picture */}
       <motion.div
         className="w-40 h-40 rounded-full overflow-hidden mb-6"

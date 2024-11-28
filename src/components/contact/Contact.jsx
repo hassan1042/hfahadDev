@@ -116,7 +116,7 @@ const InteractiveForm = () => {
   return (
     <div className="flex flex-col md:flex-row items-center justify-center max-sm:py-2 max-sm:p-2 p-6 bg-gray-100 min-h-screen">
       {/* Avatar Section */}
-      <div className="w-full md:w-1/2 flex justify-center max-sm:sticky max-sm:top-0">
+      <div className="w-full md:w-1/2 flex justify-center max-md:sticky max-sm:top-0">
         <motion.div
           initial={{ scale: 1 }}
           animate={{ scale: 1.1 }}
