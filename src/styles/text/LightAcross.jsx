@@ -4,7 +4,7 @@ import './lightAcross.css';
 function LightAcross({text}) {
   return (
     <div>
-<p className="btn-shine">{text}</p>
+<p className="btn-shine text-[16px] 2xl:text-[35px]">{text}</p>
 
     </div>
   )

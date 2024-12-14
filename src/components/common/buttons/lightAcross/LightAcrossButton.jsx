@@ -4,7 +4,7 @@ import './lightAcross.css';
 function LightAcrossButton({text}) {
   return (
    /* From Uiverse.io by satyamchaudharydev */ 
-<button className="button">
+<button className="button text-[15px] 2xl:text-[20px]">
  {text}
   <svg className="icon" viewBox="0 0 24 24" fill="currentColor">
     <path

@@ -30,11 +30,11 @@ const Projects = () => {
       className="h-full flex items-center justify-center p-2 max-sm:py-2 md:p-4 lg:p-8 relative"
     >
       {/* Slider Container */}
-      <div className="relative w-full max-w-5xl h-full flex items-center overflow-hidden  bg-gray-50 shadow-lg rounded-lg">
+      <div className="relative w-full max-w-5xl h-full flex items-center overflow-hidden  bg-gray-50 shadow-lg rounded-lg ">
         {/* Slide */}
         <motion.div
           key={currentIndex}
-          className="flex w-full max-lg:flex-col"
+          className="flex w-full max-lg:flex-col 2xl:h-[40vh]"
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -100 }}
@@ -52,7 +52,7 @@ const Projects = () => {
               <motion.img
                 src={projects[currentIndex].image}
                 alt={projects[currentIndex].title}
-                className="max-lg:w-[90%] max-lg:mx-auto w-full max-lg:h-[40svh] h-full object-cover rounded-lg shadow"
+                className="max-lg:w-[90%] max-lg:mx-auto w-full max-lg:h-[40svh]  h-full object-cover rounded-lg shadow"
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.5 }}
@@ -76,10 +76,10 @@ const Projects = () => {
 
           {/* Details */}
           <div className="max-lg:w-full w-1/2 flex-shrink-0 max-sm:p-4 p-8 ">
-            <h3 className="text-xl md:text-2xl lg:text-3xl max-sm:font-medium font-bold max-sm:mb-2 mb-4">
+            <h3 className="text-xl md:text-2xl lg:text-3xl max-sm:font-medium font-bold max-sm:mb-2 mb-4 2xl:text-[40px]">
               {projects[currentIndex].title}
             </h3>
-            <p className="text-gray-700 max-sm:mb-2 mb-6">
+            <p className="text-gray-700 max-sm:mb-2 mb-6 2xl:text-2xl">
               {projects[currentIndex].description}
             </p>
             {/** technologies */}
@@ -87,7 +87,7 @@ const Projects = () => {
               {projects[currentIndex].technologies.map((tech, index) => (
                 <motion.div
                   key={index}
-                  className="flex items-center gap-2 max-sm:px-2 max-sm:py-1 px-4 py-2 bg-gray-200  rounded-full shadow-lg hover:shadow-xl text-gray-800  text-sm lg:text-lg font-medium cursor-pointer"
+                  className="flex items-center gap-2 max-sm:px-2 max-sm:py-1 px-4 py-2 bg-gray-200 2xl:text-xl rounded-full shadow-lg hover:shadow-xl text-gray-800  text-sm lg:text-lg font-medium cursor-pointer"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.4, delay: index * 0.2 }}
@@ -97,7 +97,7 @@ const Projects = () => {
                   }}
                 >
                   {tech.icon}
-                  <span className="max-sm:text-[15px] font-medium">
+                  <span className="max-sm:text-[15px] font-medium 2xl:text-xl">
                     {tech.name}
                   </span>
                 </motion.div>

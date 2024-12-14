@@ -7,12 +7,12 @@ const SocialLinks = () => {
     {
       name: "GitHub",
       icon: <FaGithub />,
-      url: "https://github.com/dummy",
+      url: "https://github.com/hassan1042",
     },
     {
       name: "LinkedIn",
       icon: <FaLinkedin />,
-      url: "https://linkedin.com/in/dummy",
+      url: "https://www.linkedin.com/in/hfahad-dev-964697200/",
     },
   ];
 
@@ -29,7 +29,7 @@ const SocialLinks = () => {
           href={link.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-800 text-3xl hover:text-blue-500"
+          className="text-gray-800 text-3xl hover:text-blue-500 2xl:text-[2.7rem]"
           whileHover={{ scale: 1.2, rotate: 10 }}
           whileTap={{ scale: 0.9 }}
           title={`Visit my ${link.name}`}

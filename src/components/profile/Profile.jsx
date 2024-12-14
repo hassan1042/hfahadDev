@@ -35,11 +35,11 @@ const LeftProfile = () => {
         <LightAcross text={'Hassan Fahad Khan'} />
 
         </div>
-        <p className="text-gray-600">Aspiring Full Stack Developer</p>
+        <p className="text-gray-600 2xl:text-[20px]">Aspiring Full Stack Developer</p>
       </motion.div>
 
       {/* Contact Details */}
-      <div className="mt-5 space-y-4 w-full">
+      <div className="mt-5 space-y-4 w-full ">
         {/* Phone */}
         <motion.div
           className="flex items-center text-gray-800 hover:text-blue-500 cursor-pointer transition-all"
@@ -47,8 +47,8 @@ const LeftProfile = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <FaPhoneAlt className="mr-3 text-blue-500" />
-          <a href="tel:+923400480888" className="text-lg font-medium">
+          <FaPhoneAlt className="mr-3 text-blue-500 2xl:text-[1.5rem]" />
+          <a href="tel:+923400480888" className="text-lg font-medium 2xl:text-[25px]">
             +92 3400480888
           </a>
         </motion.div>
@@ -60,8 +60,8 @@ const LeftProfile = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <FaEnvelope className="mr-3 text-teal-500 500" />
-          <a href="mailto:hfahad534@gmail.com" className="text-lg font-medium">
+          <FaEnvelope className="mr-3 text-teal-500 500 2xl:text-[1.5rem]" />
+          <a href="mailto:hfahad534@gmail.com" className="text-lg font-medium 2xl:text-[25px]">
           hfahad534@gmail.com
           </a>
         </motion.div>
@@ -73,8 +73,8 @@ const LeftProfile = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <FaWhatsapp className="mr-3 text-green-500 text-xl" />
-          <a href="https://wa.me/+923400480888" className="text-lg font-medium">
+          <FaWhatsapp className="mr-3 text-green-500 text-xl 2xl:text-[1.5rem]" />
+          <a href="https://wa.me/+923400480888" className="text-lg font-medium 2xl:text-[25px]">
           Start a chat
           </a>
         </motion.div>
@@ -86,8 +86,8 @@ const LeftProfile = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          <FaMapMarkerAlt className="mr-3 text-red-500" />
-          <p className="text-lg font-medium">Swat, Pakistan</p>
+          <FaMapMarkerAlt className="mr-3 text-red-500 2xl:text-[1.5rem]" />
+          <p className="text-lg font-medium 2xl:text-[25px]">Swat, Pakistan</p>
         </motion.div>
       </div>
 

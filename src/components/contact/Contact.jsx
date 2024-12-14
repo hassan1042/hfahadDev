@@ -1,107 +1,3 @@
-// import React, { useEffect, useState } from "react";
-// import { motion } from "framer-motion";
-// import {inputStyles} from '../../styles/common/inputStyles';
-
-// const Contact = () => {
-//   const [form, setForm] = useState({ name: "", email: "", message: "" });
-//   useEffect(() => {
-//     // Create and append the script
-//     const script = document.createElement("script");
-//     script.src = "https://static-bundles.visme.co/forms/vismeforms-embed.js";
-//     script.async = true;
-//     script.id = "visme-script"; // Add an ID to track this specific script
-//     document.body.appendChild(script);
-
-//     // Cleanup function to remove the script if it exists
-//     return () => {
-//         const existingScript = document.getElementById("visme-script");
-//         if (existingScript) {
-//             document.body.removeChild(existingScript);
-//         }
-//     };
-// }, []);
-
-//   const handleChange = (e) => {
-//     const { name, value } = e.target;
-//     setForm({ ...form, [name]: value });
-//   };
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     console.log(form); // Replace this with your form submission logic
-//     alert("Message Sent!");
-//   };
-
-//   return (
-//   //   <motion.div
-//   //   className="max-h-screen flex items-center justify-center p-8"
-//   //   initial={{ opacity: 0, y: 50 }}
-//   //   animate={{ opacity: 1, y: 0 }}
-//   //   exit={{ opacity: 0, y: -50 }}
-//   //   transition={{ duration: 0.8 }}
-//   // >
-
- 
-//   //   <section className="py-16 px-6 bg-white">
-//   //     <div className="max-w-4xl mx-auto">
-//   //       <h2 className="text-4xl font-bold text-center mb-8">Contact Me</h2>
-//   //       <form onSubmit={handleSubmit} className="space-y-6">
-//   //         <input
-//   //           type="text"
-//   //           name="name"
-//   //           value={form.name}
-//   //           onChange={handleChange}
-//   //           placeholder="Your Name"
-//   //           // className="w-full px-4 py-3 border rounded-lg focus:outline-none"
-//   //           className={`${inputStyles} w-full `}
-//   //         />
-//   //         <input
-//   //           type="email"
-//   //           name="email"
-//   //           value={form.email}
-//   //           onChange={handleChange}
-//   //           placeholder="Your Email"
-//   //           // className="w-full px-4 py-3 border rounded-lg focus:outline-none"
-//   //           className={`${inputStyles} w-full `}
-//   //         />
-//   //         <textarea
-//   //           name="message"
-//   //           value={form.message}
-//   //           onChange={handleChange}
-//   //           placeholder="Your Message"
-//   //           rows="5"
-//   //           // className="w-full px-4 py-3 border rounded-lg focus:outline-none"
-//   //           className={`${inputStyles} w-full `}
-
-//   //         ></textarea>
-//   //         <button
-//   //           type="submit"
-//   //           className="w-full bg-green-500 text-white py-3 rounded-lg hover:bg-green-600"
-//   //         >
-//   //           Send Message
-//   //         </button>
-//   //       </form>
-//   //     </div>
-//   //   </section>
-//   //   </motion.div>
-// <>
-// <h1 className="text-2xl font-bold mb-4 text-center">Contact Me</h1>
-// <div
-//             className="visme_d mx-auto max-w-lg"
-//             data-title="Online Contact Form"
-//             data-url="0177kj69-online-contact-form"
-//             data-domain="forms"
-//             data-full-page="false"
-//             data-min-height="500px"
-//             data-form-id="103447"
-//         ></div>
-// </>
-//   );
-// };
-
-// export default Contact;
-
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -131,26 +27,26 @@ const InteractiveForm = () => {
           />
           {/* Speech Bubble */}
           {avatarState === "happy" && (
-            <div className="absolute top-0 max-sm:-right-24 -right-16 w-32 bg-yellow-200 rounded-lg shadow-lg p-2">
-              <p className="text-sm text-gray-700">"You're doing great!"</p>
+            <div className="absolute top-0 max-sm:-right-24 -right-16 w-32 bg-yellow-200 rounded-lg shadow-lg p-2 ">
+              <p className="text-sm text-gray-700 2xl:text-2xl">"Ok here we go!"</p>
             </div>
           )}
           {avatarState === "thinking" && (
-            <div className="absolute top-0 max-sm:-right-24 -right-16 w-32 bg-blue-200 rounded-lg shadow-lg p-2">
-              <p className="text-sm text-gray-700">"Hmm... what next?"</p>
+            <div className="absolute top-0 max-sm:-right-24 -right-16 w-32 bg-blue-200 rounded-lg shadow-lg p-2 ">
+              <p className="text-sm text-gray-700 2xl:text-2xl">"Hmm..."</p>
             </div>
           )}
           {avatarState === "learning" && (
-            <div className="absolute top-0 max-sm:-right-24 -right-16 w-32 bg-blue-200 rounded-lg shadow-lg p-2">
-              <p className="text-sm text-gray-700">"let's see"</p>
+            <div className="absolute top-0 max-sm:-right-24 -right-16 w-32 bg-blue-200 rounded-lg shadow-lg p-2 ">
+              <p className="text-sm text-gray-700 2xl:text-2xl">"let it come"</p>
             </div>
           )}
         </motion.div>
       </div>
 
       {/* Form Section */}
-      <div className="w-full md:w-1/2 bg-white rounded-lg shadow-md max-[350px]:p-2 p-6">
-        <h2 className="text-xl md:text-2xl max-sm:font-medium font-semibold text-gray-800 mb-4">
+      <div className="w-full md:w-1/2 bg-white rounded-lg shadow-md max-[350px]:p-2 p-6 2xl:text-[30px]">
+        <h2 className="text-xl md:text-2xl max-sm:font-medium font-semibold text-gray-800 mb-4 2xl:text-[40px] 2xl:text-center 2xl:mb-2">
           Contact Me
         </h2>
         <form className="space-y-4">
@@ -206,11 +102,12 @@ const InteractiveForm = () => {
             ></textarea>
           </div>
           <button
-            type="submit"
-            className="bg-blue-500 text-white font-medium px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-200"
-          >
-            Send Message
-          </button>
+  type="submit"
+  className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 hover:from-pink-500 hover:to-red-500 shadow-md hover:shadow-lg"
+>
+  Send Message
+</button>
+
         </form>
       </div>
     </div>
