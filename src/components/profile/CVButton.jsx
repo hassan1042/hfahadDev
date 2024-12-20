@@ -1,7 +1,7 @@
 import React from "react";
 import { FaDownload, FaEye } from "react-icons/fa";
 import LightAcrossButton from "../common/buttons/lightAcross/LightAcrossButton";
-import CV from './Resume-1.pdf';
+import CV from './hFahadResume.pdf';
 
 const CVButton = () => {
   return (
