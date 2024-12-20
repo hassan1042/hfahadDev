@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { useSwipeable } from "react-swipeable";
 import { projects } from "./projectsData";
 import Navigations from "./Navigations";
+import ProjectsDetails from "./ProjectsDetails";
+import ProjectImage from "./ProjectImage";
 
 const Projects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -41,69 +43,10 @@ const Projects = () => {
           transition={{ duration: 0.8 }}
         >
           {/* Image */}
-          <div className="max-lg:w-full lg:w-1/2 flex-shrink-0 p-4 ">
-            <a
-              href={projects[currentIndex].link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative group"
-            >
-              {/* Main Image */}
-              <motion.img
-                src={projects[currentIndex].image}
-                alt={projects[currentIndex].title}
-                className="max-lg:w-[90%] max-lg:mx-auto w-full max-lg:h-[40svh]  h-full object-cover rounded-lg shadow"
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.5 }}
-              />
-
-              {/* Floating Animation Overlay */}
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-br from-transparent via-blue-500 to-transparent rounded-lg opacity-40 pointer-events-none"
-                animate={{
-                  x: [0, 20, 0], // Move horizontally
-                  y: [0, -20, 0], // Move vertically
-                }}
-                transition={{
-                  duration: 3, // Duration of the animation loop
-                  repeat: Infinity, // Infinite loop
-                  repeatType: "reverse", // Reverse for smooth animation
-                }}
-              ></motion.div>
-            </a>
-          </div>
+          <ProjectImage projects={projects} currentIndex={currentIndex} />
 
           {/* Details */}
-          <div className="max-lg:w-full w-1/2 flex-shrink-0 max-sm:p-4 p-8 ">
-            <h3 className="text-xl md:text-2xl lg:text-3xl max-sm:font-medium font-bold max-sm:mb-2 mb-4 2xl:text-[40px]">
-              {projects[currentIndex].title}
-            </h3>
-            <p className="text-gray-700 max-sm:mb-2 mb-6 2xl:text-2xl">
-              {projects[currentIndex].description}
-            </p>
-            {/** technologies */}
-            <div className="flex flex-wrap gap-2 justify-center">
-              {projects[currentIndex].technologies.map((tech, index) => (
-                <motion.div
-                  key={index}
-                  className="flex items-center gap-2 max-sm:px-2 max-sm:py-1 px-4 py-2 bg-gray-200 2xl:text-xl rounded-full shadow-lg hover:shadow-xl text-gray-800  text-sm lg:text-lg font-medium cursor-pointer"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.4, delay: index * 0.2 }}
-                  whileHover={{
-                    scale: 1.1,
-                    boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.2)",
-                  }}
-                >
-                  {tech.icon}
-                  <span className="max-sm:text-[15px] font-medium 2xl:text-xl">
-                    {tech.name}
-                  </span>
-                </motion.div>
-              ))}
-            </div>
-          </div>
+          <ProjectsDetails projects={projects} currentIndex={currentIndex} />
         </motion.div>
 
         {/* Navigation Buttons */}

@@ -1,10 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
 import CVButton from "./CVButton";
-import Profile from '../../assets/common/profile.jpg';
+import Profile from "../../assets/common/profile.jpg";
 import SocialLinks from "./Socials";
 import LightAcross from "../../styles/text/LightAcross";
+import ContactDetails from "./ContactDetails";
 
 const LeftProfile = () => {
   return (
@@ -32,64 +32,15 @@ const LeftProfile = () => {
       >
         {/* <h1 className="text-xl font-bold text-gray-800">Hassan Fahad Khan</h1> */}
         <div>
-        <LightAcross text={'Hassan Fahad Khan'} />
-
+          <LightAcross text={"Hassan Fahad Khan"} />
         </div>
-        <p className="text-gray-600 2xl:text-[20px]">Aspiring Full Stack Developer</p>
+        <p className="text-gray-600 text-[15px] 2xl:text-[20px]">
+          Aspiring MERN Stack Developer
+        </p>
       </motion.div>
 
       {/* Contact Details */}
-      <div className="mt-5 space-y-4 w-full ">
-        {/* Phone */}
-        <motion.div
-          className="flex items-center text-gray-800 hover:text-blue-500 cursor-pointer transition-all"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          <FaPhoneAlt className="mr-3 text-blue-500 2xl:text-[1.5rem]" />
-          <a href="tel:+923400480888" className="text-lg font-medium 2xl:text-[25px]">
-            +92 3400480888
-          </a>
-        </motion.div>
-
-        {/* Email */}
-        <motion.div
-          className="flex items-center text-gray-800 hover:text-teal-500 cursor-pointer transition-all"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <FaEnvelope className="mr-3 text-teal-500 500 2xl:text-[1.5rem]" />
-          <a href="mailto:hfahad534@gmail.com" className="text-lg font-medium 2xl:text-[25px]">
-          hfahad534@gmail.com
-          </a>
-        </motion.div>
-        
-        {/* WA */}
-        <motion.div
-          className="flex items-center text-gray-800 hover:text-green-500 cursor-pointer transition-all"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <FaWhatsapp className="mr-3 text-green-500 text-xl 2xl:text-[1.5rem]" />
-          <a href="https://wa.me/+923400480888" className="text-lg font-medium 2xl:text-[25px]">
-          Start a chat
-          </a>
-        </motion.div>
-
-        {/* Location */}
-        <motion.div
-          className="flex items-center text-gray-800 hover:text-red-500 cursor-pointer transition-all"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-          <FaMapMarkerAlt className="mr-3 text-red-500 2xl:text-[1.5rem]" />
-          <p className="text-lg font-medium 2xl:text-[25px]">Swat, Pakistan</p>
-        </motion.div>
-      </div>
+      <ContactDetails />
 
       {/* CTA Buttons */}
       <motion.div
@@ -98,8 +49,7 @@ const LeftProfile = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.8 }}
       >
-     <CVButton/>
-      
+        <CVButton />
       </motion.div>
       <motion.div
         className="mt-5"
@@ -107,8 +57,7 @@ const LeftProfile = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.8 }}
       >
-     <SocialLinks/>
-      
+        <SocialLinks />
       </motion.div>
     </div>
   );

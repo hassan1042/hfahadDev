@@ -1,15 +1,11 @@
 import React from "react";
 import { FaDownload, FaEye } from "react-icons/fa";
 import LightAcrossButton from "../common/buttons/lightAcross/LightAcrossButton";
-import CV from './hFahadResume.pdf';
+import CV from "./hFahadResume.pdf";
 
 const CVButton = () => {
   return (
     <div className="relative group py-2">
-      {/* Main Button */}
-      {/* <button className="px-4 py-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition">
-    My Resume 
-      </button> */}
       <LightAcrossButton text={"My Resume"} />
 
       {/* Dropdown Menu */}
@@ -24,7 +20,7 @@ const CVButton = () => {
               className="flex items-center px-4 py-2 hover:bg-gray-100 text-gray-800 2xl:text-[20px]"
             >
               <FaEye className="mr-2 text-green-500" />
-              View 
+              View
             </a>
           </li>
 
@@ -36,7 +32,7 @@ const CVButton = () => {
               className="flex items-center px-4 py-2 hover:bg-gray-100 text-gray-800 2xl:text-[20px]"
             >
               <FaDownload className="mr-2 text-blue-500" />
-              Download 
+              Download
             </a>
           </li>
         </ul>

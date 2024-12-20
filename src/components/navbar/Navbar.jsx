@@ -12,7 +12,7 @@ const navItems = [
 const RightNav = ({activeSection, setActiveSection }) => {
   return (
     <motion.div
-      className="flex flex-col items-center justify-center h-full space-y-6 2xl:space-y-20 2xl:text-4xl "
+      className="flex flex-col items-center justify-center h-full space-y-6 2xl:space-y-20 2xl:text-4xl shadow-sm "
       initial={{ x: 200, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 1 }}
